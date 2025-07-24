@@ -1,6 +1,6 @@
 // HelloModal.tsx
 import { useState } from "react";
-import { Modal } from "./ui/Modal";
+import { Modal } from "../ui/Modal";
 import { ModalPage, Title, Text, Button } from "@vkontakte/vkui";
 
 export function HelloModal() {
@@ -14,6 +14,7 @@ export function HelloModal() {
     <Modal activeModal={isOpen ? "hello" : null}>
       <ModalPage
         id="hello"
+        preventClose={true}
         hideCloseButton={true}
         onClose={handleClose}
         dynamicContentHeight={true}
@@ -27,13 +28,10 @@ export function HelloModal() {
           paddingTop: "30px",
         }}
       >
-        <Title style={{ paddingBottom: "15px" }}>
-          «Кто Я?» — за 10 вопросов!
-        </Title>
-        <Text style={{ paddingBottom: "15px" }}>
-          Загадай своего друга.<br />
-          Другие игроки будут задавать вопросы, на которые можно отвечать только
-          «Да», «Нет» или «Не знаю».
+        <Title style={{ paddingBottom: "15px" }}>Aim Training</Title>
+        <Text style={{ paddingBottom: "15px", paddingRight: '5px', paddingLeft: '5px' }}>
+          Перед тобой игровое поле, где случайно появляются круги разных
+          размеров. Твоя задача — за выбранное время кликнуть по ним как можно быстрее!
         </Text>
         <Button size="m" onClick={handleClose}>
           Начать игру
