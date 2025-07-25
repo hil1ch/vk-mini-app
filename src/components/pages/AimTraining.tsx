@@ -90,7 +90,8 @@ const AimTraining: React.FC = () => {
     setNextCircleId((prev) => prev + 1);
   }, [gameActive, nextCircleId]);
 
-  const handleCircleClick = (id?: number) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleCircleClick = (_id?: number) => {
     setScore((prev) => prev + 1);
     setCircles([]);
     createRandomCircle();
